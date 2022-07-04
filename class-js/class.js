@@ -8,7 +8,16 @@ var userOne = {
     logout(){
         console.log(this.email, 'has logged out');
     }
-};
 
+}
+class User{
+    constructor(name, email){
+        this.name = name;
+        this.email = email;
+    }
+    login = () => `${this.email} has logged in`
+}
 userOne.login();
 userOne.logout();
+const user1 = new User("Bill", "bill@thehill.com")
+console.log(user1.login())
