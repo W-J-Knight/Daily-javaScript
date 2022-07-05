@@ -22,3 +22,7 @@ userOne.login();
 userOne.logout();
 const user1 = new User("Bill", "bill@thehill.com")
 console.log(user1.logout())
+let prop = 'name'
+console.log(userOne[prop])
+prop = 'email'
+console.log(userOne[prop])
