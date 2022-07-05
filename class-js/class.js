@@ -24,7 +24,7 @@ var userOne = {
 //     }
 // }
 class User{
-    constructor(name, email){
+    constructor(name, email,){
         this.name = name;
         this.email = email;
         this.score = 0;
@@ -43,13 +43,28 @@ class User{
         return this//return this for chaining
     }
 }
+
+class Admin extends User{
+    deleteUser(user){
+        users = users.filter(u =>{
+            return u.email != user1.email
+        })
+    }
+}
+
+
 userOne.login();
 userOne.logout();
-const user1 = new User("Bill", "bill@thehill.com")
-console.log(user1.logout())
+const user1 = new User("Bill", "bill@thehill.com");
+const user2 = new User("John", "smith@email.com");
+const admin1 = new Admin("admin", "admin@email.com");
+console.log(user1.logout());
 // let prop = 'name'
 // console.log(userOne[prop])
 // prop = 'email'
 // console.log(userOne[prop])
 console.log(user1.updateScore())
 user1.login().updateScore().updateScore().logout()
+let users = [user1,user2]
+admin1.deleteUser(user1);
+console.log(users)
