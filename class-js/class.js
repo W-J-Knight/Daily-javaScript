@@ -10,17 +10,37 @@ var userOne = {
     }
 
 }
+// class User{
+//     constructor(name, email){
+//         this.name = name;
+//         this.email = email;
+//         this.score = 0;
+//     }
+//     login = () => `${this.email} has logged in`;
+//     logout = () => `${this.email} has logged out`;
+//     updateScore(){
+//         this.score++;
+//         return `${this.email} Score is now ${this.score}`
+//     }
+// }
 class User{
     constructor(name, email){
         this.name = name;
         this.email = email;
         this.score = 0;
     }
-    login = () => `${this.email} has logged in`;
-    logout = () => `${this.email} has logged out`;
+    login() {
+        console.log(`${this.email} has logged in`);
+        return this//return this for chaining
+    } 
+    logout(){
+        console.log( `${this.email} has logged out`);
+        return this//return this for chaining
+    }
     updateScore(){
         this.score++;
-        return `${this.email} Score is now ${this.score}`
+        console.log(`${this.email} Score is now ${this.score}`)
+        return this//return this for chaining
     }
 }
 userOne.login();
@@ -32,3 +52,4 @@ console.log(user1.logout())
 // prop = 'email'
 // console.log(userOne[prop])
 console.log(user1.updateScore())
+user1.login().updateScore().updateScore().logout()
