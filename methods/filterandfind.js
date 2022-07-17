@@ -1,8 +1,8 @@
 // Array map review
 
-const names = ['anne', 'barry', 'chloe']
-const bigNames = names.map((name) => name.toUpperCase())
-console.log(bigNames)
+// const names = ['anne', 'barry', 'chloe']
+// const bigNames = names.map((name) => name.toUpperCase())
+// console.log(bigNames)
 
 const things = [
     {
@@ -37,3 +37,14 @@ const things = [
         points: 6
     }
 ];
+
+// const myFavoriteThings = things.filter((thing) => thing.favorite);
+// console.log(myFavoriteThings)
+
+// const thingsWithOverFiftyPoints = things.f 
+const selectThingByID = (id) => {
+    return things.find((thing) => thing.id === id)
+};
+const selectedThing = selectThingByID(4);
+console.log(selectedThing);
+
